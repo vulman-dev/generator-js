@@ -5,7 +5,7 @@
 # Обратите внимание на метаданные
  
 nodejs-package # директория (метаданные: { hidden: true })
-```
+```js
 ├── Makefile # файл  
 ├── README.md # файл  
 ├── dist # пустая директория  
@@ -22,12 +22,10 @@ nodejs-package # директория (метаданные: { hidden: true })
 Реализуйте и экспортируйте по умолчанию функцию, которая считает количество скрытых файлов в директории и всех поддиректориях. Скрытым файлом в Linux системах считается файл, название которого начинается с точки.
 
 Пример
-
-import { mkdir, mkfile } from '@hexlet/immutable-fs-trees';
-
+```js
+import { mkdir, mkfile } from '@hexlet/immutable-fs-trees';  
 import getHiddenFilesCount from '../getHiddenFilesCount.js';
- 
-```
+
 const tree = mkdir('/', [  
  mkdir('etc', [  
     mkdir('apache'),  

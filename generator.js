@@ -1,4 +1,4 @@
-import { mkdir, mkfile } from '@hexlet/immutable-fs-trees';
+import { mkdir, mkfile, getChildren, getMeta, getName} from '@hexlet/immutable-fs-trees';
 
 const generate = () => {
     const tree = mkdir('nodejs-package', [
@@ -21,4 +21,4 @@ const generate = () => {
     return tree;
 };
 
-console.log(generate());
+console.log(getMeta(generate()));

@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/vulman-dev/generator-js#readme",
   "dependencies": {
-    "@hexlet/immutable-fs-trees": "^0.7.1"
+    "@hexlet/immutable-fs-trees": "^0.7.1",
+    "lodash": "^4.17.21"
   }
 }

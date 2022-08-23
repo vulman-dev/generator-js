@@ -30,8 +30,4 @@ const getHiddenFilesCount = (tree) => {
 
 export default getHiddenFilesCount;
 
-<<<<<<< HEAD
-console.log(getHiddenFilesCount(tree));
-=======
-console.log(getHiddenFilesCount(tree));
->>>>>>> 19cdf7108aabb0ddd68181d5565644598fd81f75
+

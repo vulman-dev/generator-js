@@ -110,3 +110,54 @@ findFilesByName(tree, 'co');
 * Переменную, содержащую внутри себя путь от корня до текущего узла, можно назвать ancestry.  
 * Для построения путей используйте функцию [path.join()](https://nodejs.org/api/path.html#path_path_join_paths).  
 * Проверку вхождения строк можно делать с помощью функции [str.includes()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/includes).  
+
+
+# changeClass.js
+Реализуйте и экспортируйте по умолчанию функцию, которая принимает на вход html-дерево и заменяет во всех узлах имя класса, имена классов передаются через параметры. Функция не должна мутировать исходное дерево.
+
+Примеры:  
+```js
+import changeClass from '../changeClass.js';
+ 
+const tree = {
+  name: 'div',
+  type: 'tag-internal',
+  className: 'hexlet-community',
+  children: [
+    {
+      name: 'div',
+      type: 'tag-internal',
+      className: 'old-class',
+      children: [],
+    },
+    {
+      name: 'div',
+      type: 'tag-internal',
+      className: 'old-class',
+      children: [],
+    },
+  ],
+};
+ 
+const result = changeClass(tree, 'old-class', 'new-class');
+// Результат:
+// {
+//   name: 'div',
+//   type: 'tag-internal',
+//   className: 'hexlet-community',
+//   children: [
+//     {
+//       name: 'div',
+//       type: 'tag-internal',
+//       className: 'new-class',
+//       children: [],
+//     },
+//     {
+//       name: 'div',
+//       type: 'tag-internal',
+//       className: 'new-class',
+//       children: [],
+//     },
+//   ],
+// }
+```
